@@ -1,0 +1,150 @@
+    body, html {
+      height: 100%;
+      margin:0;
+      font-family:'Arial', sans-serif;
+       scroll-behavior: smooth;
+    }
+       #services .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#services .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Background image */
+    body {
+      background: url('./UPENDO-\ HERO.png') no-repeat center center fixed;
+      background-size: cover;
+       text-align:center;
+    }
+
+    /* Menu section background */
+.menu-section {
+  background: url('./UPENDO\ -\ MENU.JPG') 
+              no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+/* Contact section with rounded stylish top */
+.contact-section {
+  background-color: #3e2723;
+  position: relative;
+  border-top-left-radius: 50% 12%;
+  border-top-right-radius: 50% 12%;
+  z-index: 1;
+  top:-50px;
+  border-bottom: #3e2723;
+ 
+}
+
+
+/* Dark overlay for readability */
+.menu-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  margin-bottom:10px;
+}
+.menu-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Scroll animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    /* Smooth entrance for hero text */
+.hero h1, .hero p {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+.hero h1 { animation-delay: 0.2s; }
+.hero p { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Steam effect */
+.steam {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  width: 20px;
+  height: 40px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  animation: rise 4s infinite ease-in-out;
+}
+.steam:nth-child(2) { left: 55%; animation-delay: 1s; }
+.steam:nth-child(3) { left: 45%; animation-delay: 2s; }
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-80px) scale(1.2); opacity: 0; }
+}
+
+/* Floating coffee beans */
+.bean {
+  position: absolute;
+  width: 30px;
+  opacity: 0.8;
+  animation: floatUp 10s infinite linear;
+}
+@keyframes floatUp {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* Hover lift for cards */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  transition: all 0.3s ease;
+}
+
+    /* The navbar styling must be black-ish or brownish*/
+    .offcanvas-start {
+      background-color: rgba(33, 33, 33, 0.95);
+      color: #fff;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff !important;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-size: 1.1rem;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
